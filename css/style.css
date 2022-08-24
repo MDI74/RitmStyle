@@ -1,0 +1,353 @@
+html,body{
+    height: 100%;
+    background-color: #162831;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+.header:before{
+    content: '';
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #162831;
+    z-index: 3;
+}
+.header__logo{
+    z-index: 4;
+    padding-left: 5px;
+}
+.header__burger{
+    display: none;
+}
+.content {
+    flex: 1 1 auto;
+}
+.header__container {
+    position: relative;
+    padding-top: 30px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.header__menu {
+}
+.menu {
+}
+.menu__body {
+}
+.menu__list {
+    display: flex;
+    position: relative;
+    z-index: 4; 
+}
+.menu__list li{
+    list-style-type: none;
+    padding: 0px 0px 0px 50px;
+}
+.menu__link{
+    font-family: 'Proxima-nova-regular';
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.button__record{
+    position: relative;
+    padding-right: 5px;
+    z-index: 4;
+}
+.button{
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 9px 15px;
+    height: 36px;
+    background: #018ABE;
+    border-radius: 3px;
+    border: none;
+    font-family: 'Proxima-nova-semibold';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+.description {
+    padding: 100px 0px 0px 0px;
+}
+.description__container {
+    background: url(/img/description_img.svg) center center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.description__content {
+}
+.description__row {
+    display: flex;
+    justify-content: center;
+    padding: 136px 0px 40px 0px;
+    gap: 66px;
+}
+.title__row {
+    display: flex;
+    justify-content: center;
+    padding: 150px 0px 100px 0px;
+    gap: 66px
+}
+.title__text{
+    font-family: 'ElMessiri-Bold';
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+.rotate_right {
+    transform: scaleX(-1);;
+}
+.description__text{
+    font-family: 'ElMessiri-Bold';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 140%;
+    color: #FFFFFF; 
+}
+.description__title {
+    display: flex;
+    justify-content: center;
+    font-family: 'ElMessiri-Bold';
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 140%;
+    color: #FFFFFF;
+    padding-bottom: 210px;
+}
+.sessions__content{
+    
+}
+.sessions__row{
+    display: flex;
+    justify-content: space-between; 
+}
+.sessions__maincard{
+    background: url(/img/sessions_card.svg) no-repeat;
+    background-size: cover;
+    height: 540px;
+    width: 416px;
+    margin: 0px 0px 24px 0px;
+    display: flex;
+    align-items: flex-end;
+}
+.card{
+    background: url(/img/sessions_card.svg) no-repeat;
+    background-size: cover;
+    height: 258px;
+    width: 416px;
+    margin: 0px 0px 24px 24px;
+    display: flex;
+    align-items: flex-end; 
+}
+.card__text{
+    font-family: 'ElMessiri-Bold';
+    color: #FFFFFF;
+    font-size: 24px;
+    padding: 0px 0px 30px 40px;
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+  
+}
+  
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .sessions__maincard{
+        height: 540px;
+        width: 380px;
+    }
+    .card{
+        height: 258px;
+        width: 340px;
+    }
+}
+  
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .menu__list li{
+        list-style-type: none;
+        padding: 0px 0px 0px 20px;
+    }
+    .button{
+        font-size: 12px;
+    }
+    .card{
+        height: 258px;
+        width: 280px;
+    }
+    .card__text{
+        font-size: 22px;
+    }
+}
+  
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    body.lock{
+        overflow: hidden;
+    }
+    .header__burger{
+        display: block;
+        position: relative;
+        right: 20px;
+        width: 30px;
+        height: 20px;
+        z-index: 4;
+        order: 3;
+    }
+    .header__burger span{
+        position: absolute;
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.5s ease 0s;
+    }
+    .header__burger::before,
+    .header__burger::after{
+        content: '';
+        background: #FFFFFF;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.5s ease 0s
+    }
+    .header__burger::before{
+        top: 0;
+    }
+    .header__burger::after{
+        bottom: 0;
+    }
+    .header__burger.active span{
+        transform: scale(0);
+    }
+    .header__burger.active:before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header__burger.active:after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header__menu{
+        position: fixed;
+        text-align: center;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 420px;
+        background-color: #162831;
+        transition: all 0.5s ease 0s;
+    }
+    .header__menu.active{
+        top: 0;
+    }
+    .button__record{
+        padding-right: 40px;
+        z-index: 4;
+        order: 2;
+    }
+    .menu__link{
+        font-size: 20px;
+    }
+    .menu__list {
+        display: block;
+        padding: 100px 0px 0px 0px;
+    }
+    .menu__list li{
+        padding: 0px 30px 20px 10px;
+    }
+    .title__row {
+        gap: 36px;
+    }
+    .sessions__row{
+        display: flex;
+        justify-content: flex-start; 
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        margin: 0px 0px 24px 0px;
+    }
+    .sessions__maincard{
+        height: 258px;
+    }
+    
+}
+  
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+    .description__text {
+        font-size: 21px;
+    }
+    .title__row {
+        gap: 12px;
+    }
+    .title__text{
+        font-size: 28px;
+    }
+    .description__title {
+        font-size: 48px;
+        padding-bottom: 150px;
+    }
+    .card{
+        margin: 0px 0px 24px 0px;
+        width: 340px;
+    }
+    .sessions__maincard{
+        width: 340px;
+    }
+    .card__text{
+        font-size: 22px;
+        padding: 0px 0px 30px 40px;
+    }
+}
+  
+/* Small phones */
+@media (max-width: 320px) {
+    .title__row {
+        gap: 16px;
+    }
+    .description__title {
+        font-size: 38px;
+        padding-bottom: 150px;
+    }
+    .title__text{
+        font-size: 26px;
+    }
+  
+}
+
+
